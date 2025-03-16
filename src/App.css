@@ -55,4 +55,5 @@
   text-align: center;
   color: #333;
   font-size: revert-layer;
+  border-bottom: 3px solid #000000;
 }
