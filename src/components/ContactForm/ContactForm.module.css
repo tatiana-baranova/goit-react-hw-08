@@ -48,3 +48,9 @@
 .error {
     color: red;
 }
+
+@media (min-width: 678px) and (max-width: 1200px) {
+    .container {
+        margin: 20px auto;
+    }
+}

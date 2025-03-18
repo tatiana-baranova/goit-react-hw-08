@@ -27,3 +27,12 @@
     color: black;
     text-align: left;
 }
+
+@media (min-width: 678px) and (max-width: 1200px) {
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
