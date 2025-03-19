@@ -36,7 +36,8 @@ const contactsSlice = createSlice({
             })
             .addMatcher(isAnyOf(fetchContacts.rejected, addContact.rejected, deleteContact.rejected), (state, action) => {
                 state.loading = false;
-                state.error = action.error?.message || "Щось пішло не так";
+                state.error = action.payload;
+                // state.error = action.error?.message || "Щось пішло не так";
             });
     }
 });
