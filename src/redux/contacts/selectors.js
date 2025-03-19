@@ -6,9 +6,22 @@ export const selectError = state => state.contacts.error;
 export const selectNameFilter = state => state.filters.name;
 
 export const selectFilteredContacts = createSelector(
-    [selectContacts, selectNameFilter], (contacts, nameFilter) => {
-        return contacts.filter(contact =>
-            contact.name.toLowerCase().includes(nameFilter.toLowerCase())
-        );
+    [selectContacts, selectNameFilter],
+    (contacts, nameFilter) => {
+    if (!Array.isArray(contacts)) {
+        console.warn("Contacts is not an array", contacts);
+        return [];
+    }
+    return contacts.filter(contact =>
+        contact.name.toLowerCase().includes(nameFilter.toLowerCase())
+    );
     }
 );
+
+// export const selectFilteredContacts = createSelector(
+//     [selectContacts, selectNameFilter], (contacts, nameFilter) => {
+//         return contacts.filter(contact =>
+//             contact.name.toLowerCase().includes(nameFilter.toLowerCase())
+//         );
+//     }
+// );
