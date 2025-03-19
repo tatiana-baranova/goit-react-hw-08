@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // axios.defaults.baseURL = 'https://67d09fa0825945773eb17e7f.mockapi.io/';
 
-axios.defaults.baseURL = 'https:connections-api.goit.global/';
+// axios.defaults.baseURL = 'https:connections-api.goit.global/';
 
 
 export const fetchContacts = createAsyncThunk(
@@ -11,7 +11,7 @@ export const fetchContacts = createAsyncThunk(
     async (_, thunkAPI) => {
         try {
             const { data } = await axios.get('/contacts');
-            console.log(data);
+            // console.log(data);
             
             return data;
         } catch (error) {
