@@ -6,6 +6,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #26c7fd61;
+  background-color: #65afc7eb;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,7 +16,8 @@
 
 a {
   font-weight: 500;
-  color: #096485;
+  /* color: #096485; */
+  color: #e8eff2;
   text-decoration: inherit;
 }
 
