@@ -14,7 +14,7 @@ const ContactsPage = () => {
     const isError = useSelector(selectError);
 
     useEffect(() => {
-        dispatch(fetchContacts())
+        dispatch(fetchContacts());
     }, [dispatch]);
 
     return (

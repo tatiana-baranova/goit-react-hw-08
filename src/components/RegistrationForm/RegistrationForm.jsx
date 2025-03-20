@@ -26,15 +26,14 @@ const RegistrationForm = () => {
     const FeedbackSchema = Yup.object().shape({
         name: Yup.string().min(2, 'Too Short!').max(20, 'Too Long!').required('Required'),
         email: Yup.string()
-            .email('Must be a valid email!') 
+            .email('Must be a valid email!')
             .required('Required'),
-        password: Yup.string().min(4, 'password must be at least 4 characters long')
-            .matches(RegExp('(.*[a-z].*)'), 'password must contain at least 1 lower case letter')
-            .matches(RegExp('(.*\\d.*)'), 'password must contain at least 1 number')
-            .matches(RegExp('[!@#$%^&*(),.?":{}|<>]'),
-            'password must contain at least 1 special character')
+        password: Yup.string()
+            .min(4, 'Password must be at least 4 characters long')
+            .matches(/.*[a-z].*/, 'Password must contain at least 1 lowercase letter')
+            .matches(/.*\d.*/, 'Password must contain at least 1 number')
+            .matches(/[!@#$%^&*(),.?":{}|<>]/, 'Password must contain at least 1 special character')
             .required('Required'),
-        
     })
 
     return (
