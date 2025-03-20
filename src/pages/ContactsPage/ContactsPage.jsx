@@ -14,7 +14,9 @@ const ContactsPage = () => {
     const isError = useSelector(selectError);
 
     useEffect(() => {
-        dispatch(fetchContacts());
+        const abortController = new AbortController();
+    dispatch(fetchContacts(abortController.signal));
+    return () => abortController.abort();
     }, [dispatch]);
 
     return (

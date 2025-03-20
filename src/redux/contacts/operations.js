@@ -1,16 +1,13 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
 import toast from 'react-hot-toast';
-
-// axios.defaults.baseURL = 'https://67d09fa0825945773eb17e7f.mockapi.io/';
-// axios.defaults.baseURL = 'https:connections-api.goit.global/';
+import { api } from '../auth/operations'
 
 
 export const fetchContacts = createAsyncThunk(
     'contacts/fetchAll',
     async (_, thunkAPI) => {
         try {
-            const { data } = await axios.get('/contacts');
+            const { data } = await api.get('/contacts');
             return data;
         } catch (error) {
             toast.error('No contacts found. Try again later.')
@@ -20,15 +17,13 @@ export const fetchContacts = createAsyncThunk(
 );
 
 export const addContact = createAsyncThunk(
-    'contacts/addContact',
-    async (body, thunkAPI) => {
+    "contacts/addContact",
+    async (contact, thunkAPI) => {
         try {
-            const { data } = await axios.post('/contacts', body);
-            toast.success('The contact was added successfully!');
+            const { data } = await api.post("/contacts", contact);
             return data;
         } catch (error) {
-            toast.error(`Failed to add contact. Try again later.`);
-            return thunkAPI.rejectWithValue(error.message);
+            return thunkAPI.rejectWithValue(error.response?.data?.message || error.message);
         }
     }
 );
@@ -37,7 +32,7 @@ export const deleteContact = createAsyncThunk(
     'contacts/deleteContact',
     async (id, thunkAPI) => {
         try {
-            const { data } = await axios.delete(`/contacts/${id}`);
+            const { data } = await api.delete(`/contacts/${id}`);
             toast.success('The contact was successfully deleted!');
             return data;
         } catch (error) {
