@@ -3,9 +3,10 @@
   margin: 0 auto;
   padding: 1.5rem;
   text-align: center;
-  border: 2px solid #0d344e;
+  /* border: 2px solid #0d344e; */
   border-radius: 8px;
-  background-color: #c9dce9cc;
+  /* background-color: #c9dce9cc; */
+  background-color: #8aa4b49f;
 }
 
 .logo {
