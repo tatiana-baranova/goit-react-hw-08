@@ -8,12 +8,15 @@
 .title {
     font-size: 22px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     text-align: center;
+    box-shadow: 0 2px 2px #d7dbde;
+    border-radius: 6px;
 }
 
 .btn {
     margin-bottom: 16px;
     color: white;
     font-size: 16px;
+    box-shadow: 0 2px 8px #0d344e;
 }

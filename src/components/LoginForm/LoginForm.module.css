@@ -21,6 +21,7 @@ input::placeholder {
 .btnLog {
     font-size: 14px;
     color: white;
+    box-shadow: 0 2px 8px #0d344e;
 }
 
 .form {
