@@ -1,0 +1,17 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: 16px;
+    /* box-shadow: 0 4px 15px #0d344e; */
+}
+
+.link {
+    box-shadow: 0 2px 2px #0d344e72;
+    color: white;
+    border-radius: 2px;
+}
+
+.active {}

@@ -1,0 +1,22 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.input {
+    background-color: aliceblue;
+    width: 260px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+        -4px 0 6px rgba(0, 0, 0, 0.1),
+        4px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    font-size: 14px;
+    color: white;
+}

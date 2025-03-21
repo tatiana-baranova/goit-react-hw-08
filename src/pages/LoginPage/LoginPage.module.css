@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.info {
+    font-size: 16px;
+    color: white;
+}
+
+.text {
+    font-size: 14px;
+    color: white;
+}

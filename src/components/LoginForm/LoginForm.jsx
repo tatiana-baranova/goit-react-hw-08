@@ -43,7 +43,7 @@ const LoginForm = () => {
             onSubmit={handleSubmit}
             validationSchema={FeedbackSchema}
         >
-            <Form>
+            <Form className={s.form}>
                 <div className={s.wrapInput}>
                     <Field
                         className={s.input}

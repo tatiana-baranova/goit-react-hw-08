@@ -5,7 +5,7 @@ import s from './LoginPage.module.css';
 const LoginPage = () => {
     return (
         <div className={s.container}>
-            <p className={s.text}>Please login to your account.</p>
+            <p className={s.info}>Please login to your account.</p>
             <LoginForm />
             <p className={s.text}>
             New user?{' '}

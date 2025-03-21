@@ -14,16 +14,9 @@ const RegistrationPage = lazy(() => import('./pages/RegistrationPage/Registratio
 const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'));
 const ContactsPage = lazy(() => import('./pages/ContactsPage/ContactsPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage/NotFoundPage'));
-// import ContactForm from './components/ContactForm/ContactForm'
-// import ContactList from './components/ContactList/ContactList'
-// import SearchBox from './components/SearchBox/SearchBox'
-// import { fetchContacts } from './redux/contacts/operations'
-// import { selectLoading, selectError} from './redux/contacts/selectors'
 
 function App() {
   const dispatch = useDispatch();
-  // const isLoading = useSelector(selectLoading);
-  // const isError = useSelector(selectError);
 
   useEffect(() => {
     dispatch(refreshUser());
